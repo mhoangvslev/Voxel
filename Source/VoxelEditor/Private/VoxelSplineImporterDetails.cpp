@@ -28,7 +28,7 @@ TSharedRef<IDetailCustomization> UVoxelSplineImporterDetails::MakeInstance()
 
 void UVoxelSplineImporterDetails::CustomizeDetails(IDetailLayoutBuilder& DetailLayout)
 {
-	const TArray< TWeakObjectPtr<UObject> >& SelectedObjects = DetailLayout.GetDetailsView().GetSelectedObjects();
+	const TArray< TWeakObjectPtr<UObject> >& SelectedObjects = DetailLayout.GetDetailsView()->GetSelectedObjects();
 
 	for (int32 ObjectIndex = 0; ObjectIndex < SelectedObjects.Num(); ++ObjectIndex)
 	{
